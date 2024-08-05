@@ -14,63 +14,74 @@ def image_to_base64(image_path):
     img_str = base64.b64encode(buffered.getvalue()).decode()
     return img_str
 
-# Title of the portfolio (centered)
-st.markdown(
-    """
-    <div style="text-align: center;">
-        <h1>My Portfolio</h1>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# Project 1
+image_path1 = "pics/coursera_header.png"
+image_base64_1 = image_to_base64(image_path1)
 
-# Add some padding or margins to the left and right
+# Project 2
+image_path2 = "pics/Intro_Objective.png"
+image_base64_2 = image_to_base64(image_path2)
+
+# Add CSS for the layout
 st.markdown(
     """
     <style>
-        .main {
-            padding-left: 15%;
-            padding-right: 15%;
-        }
-        .flex-container {
+        .project-container {
             display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .project {
+            border: 1px solid #e6e6e6;
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #f9f9f9;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
             align-items: center;
         }
-        .flex-item-image {
-            flex: 1;
-            padding-right: 20px; /* Space between image and text */
+        .project img {
+            max-width: 100%;
+            border-radius: 8px;
         }
-        .flex-item-text {
-            flex: 2;
+        .project h2 {
+            margin-top: 16px;
         }
-        .flex-item-image img {
-            width: 100%; /* Adjust image size */
-            max-width: 400px; /* Maximum width for the image */
-            height: auto;
+        .project p {
+            text-align: justify;
+        }
+        .project a {
+            margin-top: auto;
+            text-decoration: none;
+            color: #1a73e8;
         }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Image path
-image_path = "pics/coursera_header.png"
-image_base64 = image_to_base64(image_path)
-
-# Display content with image on the left and details on the right
+# Display two projects side by side
 st.markdown(
     f"""
-    <div class="flex-container">
-        <div class="flex-item-image">
+    <div class="project-container">
+        <div class="project">
             <a href="https://courseraplus-cmcova.streamlit.app/" target="_blank">
-                <img src="data:image/png;base64,{image_base64}" alt="Dashboard Image">
+                <img src="data:image/png;base64,{image_base64_1}" alt="Project 1 Image">
             </a>
-            <div style="text-align: center;">
-                <p>Click the image above to view the Data Science project.</p>
-            </div>
-        </div>
-        <div class="flex-item-text">
+            <h2>Course Recommender App</h2>
             <p>Coursera Plus is a Course Recommender App that makes use of Coursera data to develop a machine learning model that can assist you in deciding the perfect online learning course fit to your needs. We implemented a system where user queries are embedded to retrieve the top n most similar results from our knowledge base. Users can apply filters to refine the suggestions based on their preferences. The selected courses are then summarized using ChatGPT, highlighting how they can benefit the user according to their initial query. The project was built using the OpenAI API key and Retrieval-Augmented Generation (RAG) techniques.</p>
+            <a href="https://courseraplus-cmcova.streamlit.app/" target="_blank">Click here to view</a>
+        </div>
+        <div class="project">
+            <a href="https://aitapredictor-cmc.streamlit.app/" target="_blank">
+                <img src="data:image/png;base64,{image_base64_2}" alt="Project 2 Image">
+            </a>
+            <h2>Reddit AITA Predictor</h2>
+            <p>This Streamlit app makes use of webscraped subreddit data to develop a machine learning model that can assist you in creating moral judgments in various situations you face in everyday life.</p>
+            <a href="https://aitapredictor-cmc.streamlit.app/" target="_blank">Click here to view</a>
         </div>
     </div>
     """,
