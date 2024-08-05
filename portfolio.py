@@ -22,53 +22,14 @@ image_base64_1 = image_to_base64(image_path1)
 image_path2 = "pics/Intro_Objective.png"
 image_base64_2 = image_to_base64(image_path2)
 
-# # Add CSS for the layout
-# st.markdown(
-#     """
-#     <style>
-#         .project-container {
-#             display: flex;
-#             flex-direction: row;
-#             justify-content: space-between;
-#             gap: 20px;
-#             margin-top: 20px;
-#         }
-#         .project {
-#             border: 1px solid #e6e6e6;
-#             border-radius: 8px;
-#             padding: 16px;
-#             background-color: #f9f9f9;
-#             flex: 1;
-#             display: flex;
-#             flex-direction: column;
-#             align-items: center;
-#         }
-#         .project img {
-#             max-width: 100%;
-#             border-radius: 8px;
-#         }
-#         .project h2 {
-#             margin-top: 16px;
-#         }
-#         .project p {
-#             text-align: justify;
-#         }
-#         .project a {
-#             margin-top: auto;
-#             text-decoration: none;
-#             color: #1a73e8;
-#         }
-#     </style>
-#     """,
-#     unsafe_allow_html=True
-# )
-
+# Add CSS for the layout
 st.markdown(
     """
     <style>
         .project-container {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-between;
             gap: 20px;
             margin-top: 20px;
         }
@@ -77,26 +38,23 @@ st.markdown(
             border-radius: 8px;
             padding: 16px;
             background-color: #f9f9f9;
+            flex: 1;
             display: flex;
+            flex-direction: column;
             align-items: center;
         }
         .project img {
-            max-width: 150px;
-            margin-right: 20px;
+            max-width: 100%;
             border-radius: 8px;
         }
-        .project-details {
-            flex: 1;
-        }
         .project h2 {
-            margin-top: 0;
+            margin-top: 16px;
         }
         .project p {
-            margin: 5px 0;
             text-align: justify;
         }
         .project a {
-            margin-top: 10px;
+            margin-top: auto;
             text-decoration: none;
             color: #1a73e8;
         }
@@ -104,6 +62,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 # Title of the portfolio (centered)
 st.markdown(
