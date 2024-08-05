@@ -3,6 +3,8 @@ from PIL import Image
 import base64
 from io import BytesIO
 
+st.set_page_config(layout='wide')
+
 # Function to convert image to base64
 def image_to_base64(image_path):
     img = Image.open(image_path)
