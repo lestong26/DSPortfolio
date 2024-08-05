@@ -7,7 +7,7 @@ st.title("My Portfolio")
 st.markdown(
     """
     <a href="https://courseraplus-cmcova.streamlit.app/" target="_blank">
-        st.image('pics/coursera_header.png')
+        <img src='DSPortfolio/pics/coursera_png' alt="Dashboard Image" style="width:100%;height:auto;">
     </a>
     """,
     unsafe_allow_html=True
