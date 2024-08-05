@@ -3,6 +3,7 @@ from PIL import Image
 import base64
 from io import BytesIO
 
+# Set page layout to wide
 st.set_page_config(layout='wide')
 
 # Function to convert image to base64
@@ -31,6 +32,22 @@ st.markdown(
             padding-left: 15%;
             padding-right: 15%;
         }
+        .flex-container {
+            display: flex;
+            align-items: center;
+        }
+        .flex-item-image {
+            flex: 1;
+            padding-right: 20px; /* Space between image and text */
+        }
+        .flex-item-text {
+            flex: 2;
+        }
+        .flex-item-image img {
+            width: 100%; /* Adjust image size */
+            max-width: 400px; /* Maximum width for the image */
+            height: auto;
+        }
     </style>
     """,
     unsafe_allow_html=True
@@ -43,16 +60,16 @@ image_base64 = image_to_base64(image_path)
 # Display content with image on the left and details on the right
 st.markdown(
     f"""
-    <div style="display: flex; align-items: center;">
-        <div style="flex: 1;">
+    <div class="flex-container">
+        <div class="flex-item-image">
             <a href="https://courseraplus-cmcova.streamlit.app/" target="_blank">
-                <img src="data:image/png;base64,{image_base64}" alt="Dashboard Image" style="width:100%;height:auto;">
+                <img src="data:image/png;base64,{image_base64}" alt="Dashboard Image">
             </a>
             <div style="text-align: center;">
                 <p>Click the image above to view the Data Science project.</p>
             </div>
         </div>
-        <div style="flex: 2; padding-left: 20px;">
+        <div class="flex-item-text">
             <p>Coursera Plus is a Course Recommender App that makes use of Coursera data to develop a machine learning model that can assist you in deciding the perfect online learning course fit to your needs. We implemented a system where user queries are embedded to retrieve the top n most similar results from our knowledge base. Users can apply filters to refine the suggestions based on their preferences. The selected courses are then summarized using ChatGPT, highlighting how they can benefit the user according to their initial query. The project was built using the OpenAI API key and Retrieval-Augmented Generation (RAG) techniques.</p>
         </div>
     </div>
