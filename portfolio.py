@@ -28,8 +28,8 @@ st.markdown(
     """
     <style>
         .main {
-            padding-left: 5%;
-            padding-right: 5%;
+            padding-left: 15%;
+            padding-right: 15%;
         }
     </style>
     """,
