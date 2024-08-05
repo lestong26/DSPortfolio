@@ -22,6 +22,14 @@ image_base64_1 = image_to_base64(image_path1)
 image_path2 = "pics/Intro_Objective.png"
 image_base64_2 = image_to_base64(image_path2)
 
+# Project 3
+image_path3 = "pics/ml_app.png"
+image_base64_3 = image_to_base64(image_path3)
+
+# Project 4
+image_path4 = "pics/adobo_front.png"
+image_base64_4 = image_to_base64(image_path4)
+
 # Add CSS for the layout
 st.markdown(
     """
@@ -93,6 +101,30 @@ st.markdown(
             <h2>Reddit AITA Predictor</h2>
             <p>This Streamlit app makes use of webscraped subreddit data to develop a machine learning model that can assist you in creating moral judgments in various situations you face in everyday life.</p>
             <a href="https://aitapredictor-cmc.streamlit.app/" target="_blank">Click here to view</a>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    f"""
+    <div class="project-container">
+        <div class="project">
+            <a href="https://mltrafficsafety-cmcova.streamlit.app/" target="_blank">
+                <img src="data:image/png;base64,{image_base64_3}" alt="Project 3 Image">
+            </a>
+            <h2>Self-Accident Detection App</h2>
+            <p>Self-Accident Detection App is an app with A Machine Learning Approach to Predict and Prevent Self-Accidents. The goal of this project is to highlight the challenges and propose solutions derived from insights gathered through the application of machine learning techniques.</p>
+            <a href="https://mltrafficsafety-cmcova.streamlit.app/" target="_blank">Click here to view</a>
+        </div>
+        <div class="project">
+            <a href="https://eskwelabssprint1-cmcova.streamlit.app/" target="_blank">
+                <img src="data:image/png;base64,{image_base64_4}" alt="Project 2 Image">
+            </a>
+            <h2>Hello, Risk, Goodbye</h2>
+            <p>This project is more on exploring and presenting the analysis and insights on the customers of the client: Adobo Advantage Cards.</p>
+            <a href="https://eskwelabssprint1-cmcova.streamlit.app/" target="_blank">Click here to view</a>
         </div>
     </div>
     """,
