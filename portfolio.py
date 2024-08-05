@@ -27,8 +27,12 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# Add a description or other content as needed
-st.write("Click the image above to view the Data Science project.")
-
-st.write("Click the image above to view the Data Science project.")
+st.markdown(
+    """
+    <div style="text-align: center;">
+        <p>Click the image above to view the Data Science project.</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+st.write("Coursera Plus is a Course Recommender App that makes use of Coursera data to develop a machine learning model that can assist you in deciding the perfect online learning course fit to your needs. We implemented a system where user queries are embedded to retrieve the top n most similar results from our knowledge base. Users can apply filters to refine the suggestions based on their preferences. The selected courses are then summarized using ChatGPT, highlighting how they can benefit the user according to their initial query. The project was built using the OpenAI API key and Retrieval-Augmented Generation (RAG) techniques") 
