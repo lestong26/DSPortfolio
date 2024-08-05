@@ -63,6 +63,16 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Title of the portfolio (centered)
+st.markdown(
+    """
+    <div style="text-align: center;">
+        <h1>My Portfolio</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
 # Display two projects side by side
 st.markdown(
     f"""
