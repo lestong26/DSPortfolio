@@ -13,8 +13,28 @@ def image_to_base64(image_path):
     img_str = base64.b64encode(buffered.getvalue()).decode()
     return img_str
 
-# Title of the portfolio
-st.title("My Portfolio")
+# Title of the portfolio (centered)
+st.markdown(
+    """
+    <div style="text-align: center;">
+        <h1>My Portfolio</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Add some padding or margins to the left and right
+st.markdown(
+    """
+    <style>
+        .main {
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Image path
 image_path = "pics/coursera_header.png"
