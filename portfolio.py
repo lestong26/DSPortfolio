@@ -22,14 +22,53 @@ image_base64_1 = image_to_base64(image_path1)
 image_path2 = "pics/Intro_Objective.png"
 image_base64_2 = image_to_base64(image_path2)
 
-# Add CSS for the layout
+# # Add CSS for the layout
+# st.markdown(
+#     """
+#     <style>
+#         .project-container {
+#             display: flex;
+#             flex-direction: row;
+#             justify-content: space-between;
+#             gap: 20px;
+#             margin-top: 20px;
+#         }
+#         .project {
+#             border: 1px solid #e6e6e6;
+#             border-radius: 8px;
+#             padding: 16px;
+#             background-color: #f9f9f9;
+#             flex: 1;
+#             display: flex;
+#             flex-direction: column;
+#             align-items: center;
+#         }
+#         .project img {
+#             max-width: 100%;
+#             border-radius: 8px;
+#         }
+#         .project h2 {
+#             margin-top: 16px;
+#         }
+#         .project p {
+#             text-align: justify;
+#         }
+#         .project a {
+#             margin-top: auto;
+#             text-decoration: none;
+#             color: #1a73e8;
+#         }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
+
 st.markdown(
     """
     <style>
         .project-container {
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
             gap: 20px;
             margin-top: 20px;
         }
@@ -38,23 +77,26 @@ st.markdown(
             border-radius: 8px;
             padding: 16px;
             background-color: #f9f9f9;
-            flex: 1;
             display: flex;
-            flex-direction: column;
             align-items: center;
         }
         .project img {
-            max-width: 100%;
+            max-width: 150px;
+            margin-right: 20px;
             border-radius: 8px;
         }
+        .project-details {
+            flex: 1;
+        }
         .project h2 {
-            margin-top: 16px;
+            margin-top: 0;
         }
         .project p {
+            margin: 5px 0;
             text-align: justify;
         }
         .project a {
-            margin-top: auto;
+            margin-top: 10px;
             text-decoration: none;
             color: #1a73e8;
         }
@@ -82,7 +124,7 @@ st.markdown(
                 <img src="data:image/png;base64,{image_base64_1}" alt="Project 1 Image">
             </a>
             <h2>Course Recommender App</h2>
-            <p>Coursera Plus is a Course Recommender App that makes use of Coursera data to develop a machine learning model that can assist you in deciding the perfect online learning course fit to your needs. We implemented a system where user queries are embedded to retrieve the top n most similar results from our knowledge base. Users can apply filters to refine the suggestions based on their preferences. The selected courses are then summarized using ChatGPT, highlighting how they can benefit the user according to their initial query. The project was built using the OpenAI API key and Retrieval-Augmented Generation (RAG) techniques.</p>
+            <p>Coursera Plus is a Course Recommender App that makes use of Coursera data to develop a machine learning model that can assist you in deciding the perfect online learning course fit to your needs. The project was built using the OpenAI API key for the LLM Embedding and Retrieval-Augmented Generation (RAG) techniques.</p>
             <a href="https://courseraplus-cmcova.streamlit.app/" target="_blank">Click here to view</a>
         </div>
         <div class="project">
