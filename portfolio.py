@@ -86,7 +86,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# First project centered
 st.markdown(
     f"""
     <style>
@@ -96,11 +95,10 @@ st.markdown(
         align-items: center;
         flex-direction: column;
         text-align: center;
-        margin-bottom: 50px;
-        width: 50%; /* Set the width of the container to match the image */
+        margin: 0 auto 50px auto; /* Centers the container and adds space at the bottom */
+        width: 50%; /* Set the width of the container */
     }}
     .centered-project img {{
-        justify-content: center;
         max-width: 100%; /* Image will take up 100% of the container's width */
         height: auto;
     }}
