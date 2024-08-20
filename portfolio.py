@@ -14,6 +14,10 @@ def image_to_base64(image_path):
     img_str = base64.b64encode(buffered.getvalue()).decode()
     return img_str
 
+# Capstone Project
+image_path13 = "pics/askwelabscover.png"
+image_base64_13 = image_to_base64(image_path13)
+
 # Project 1
 image_path1 = "pics/coursera_header.png"
 image_base64_1 = image_to_base64(image_path1)
@@ -77,6 +81,35 @@ st.markdown(
     """
     <div style="text-align: center;">
         <h1>My Portfolio</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+st.markdown(
+    f"""
+    <style>
+    .project-container {{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }}
+    .project img {{
+        max-width: 100%;
+        height: auto;
+    }}
+    </style>
+    <div class="project-container">
+        <div class="project">
+            <a href="https://askwelabscapstoneproject.streamlit.app/" target="_blank">
+                <img src="data:image/png;base64,{image_base64_13}" alt="Capstone Project Image">
+            </a>
+            <h2>Askwelabs: AI-Powered Chatbot and Study Path Recommendations</h2>
+            <p>Askwelabs is an AI-driven platform offering a Q&A Chatbot that answers common questions about Eskwelabs and analyzes resumes to recommend whether users should join a bootcamp or pursue self-study. It also features a Study Path Recommendation System that creates personalized learning plans based on user preferences in difficulty and focus area, whether Data Analytics or Data Science. Built with ChromaDB, LangChain, and OpenAI’s GPT-3.5 Turbo, Askwelabs delivers tailored educational guidance.</p>
+            <a href="https://askwelabscapstoneproject.streamlit.app/" target="_blank">Click here to view</a>
+        </div>
     </div>
     """,
     unsafe_allow_html=True
