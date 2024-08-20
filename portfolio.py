@@ -161,6 +161,22 @@ st.markdown(
 
 st.markdown(
     f"""
+    <style>
+    .project-container {{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: center;
+    }}
+    .project-container .project {{
+        flex: 1;
+        margin: 0 40px; /* Adds space between the two projects */
+    }}
+    .project-container img {{
+        max-width: 80%;
+        height: auto;
+    }}
+    
     <div class="project-container">
         <div class="project">
             <a href="https://mltrafficsafety-cmcova.streamlit.app/" target="_blank">
