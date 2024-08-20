@@ -99,7 +99,7 @@ st.markdown(
         margin-bottom: 50px; /* Adds space between the centered project and the side-by-side projects */
     }}
     .centered-project img {{
-        max-width: 100%;
+        max-width: 50%;
         height: auto;
     }}
     </style>
