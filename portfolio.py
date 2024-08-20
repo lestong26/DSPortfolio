@@ -100,6 +100,7 @@ st.markdown(
         width: 50%; /* Set the width of the container to match the image */
     }}
     .centered-project img {{
+        justify-content: center;
         max-width: 100%; /* Image will take up 100% of the container's width */
         height: auto;
     }}
