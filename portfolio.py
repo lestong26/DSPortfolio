@@ -27,7 +27,7 @@ image_path2 = "pics/Intro_Objective.png"
 image_base64_2 = image_to_base64(image_path2)
 
 # Project 3
-image_path3 = "pics/ml_app.png"
+image_path3 = "pics/MLDetection.png"
 image_base64_3 = image_to_base64(image_path3)
 
 # Project 4
