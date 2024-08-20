@@ -86,22 +86,24 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# First project centered
 st.markdown(
     f"""
-    # <style>
-    # .project-container {{
-    #     display: flex;
-    #     justify-content: center;
-    #     align-items: center;
-    #     flex-direction: column;
-    #     text-align: center;
-    # }}
-    # .project img {{
-    #     max-width: 100%;
-    #     height: auto;
-    # }}
-    # </style>
-    <div class="project-container">
+    <style>
+    .centered-project {{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 50px; /* Adds space between the centered project and the side-by-side projects */
+    }}
+    .centered-project img {{
+        max-width: 100%;
+        height: auto;
+    }}
+    </style>
+    <div class="centered-project">
         <div class="project">
             <a href="https://askwelabscapstoneproject.streamlit.app/" target="_blank">
                 <img src="data:image/png;base64,{image_base64_13}" alt="Capstone Project Image">
@@ -115,10 +117,26 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Display two projects side by side
+# Second markdown with two projects side by side
 st.markdown(
     f"""
-    <div class="project-container">
+    <style>
+    .side-by-side-container {{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        text-align: center;
+    }}
+    .side-by-side-container .project {{
+        flex: 1;
+        margin: 0 20px; /* Adds space between the two projects */
+    }}
+    .side-by-side-container img {{
+        max-width: 100%;
+        height: auto;
+    }}
+    </style>
+    <div class="side-by-side-container">
         <div class="project">
             <a href="https://courseraplus-cmcova.streamlit.app/" target="_blank">
                 <img src="data:image/png;base64,{image_base64_1}" alt="Project 1 Image">
@@ -139,6 +157,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 st.markdown(
     f"""
