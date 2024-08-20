@@ -81,6 +81,7 @@ st.markdown(
     """
     <div style="text-align: center;">
         <h1>My Portfolio</h1>
+        <h3>Welcome to my portfolio! Here, you'll find a journey through my projects, starting with customer data analysis for ADOBO Advantage Cards and progressing to the Self-Accident Detection App, a tool to predict and prevent accidents. I explored NLP in the Reddit AITA Predictor, built a course recommender in Coursera Plus, and developed Askwelabs, an AI platform for personalized educational guidance. Explore these projects to see how I've applied advanced techniques to solve real-world challenges.</h3>
     </div>
     """,
     unsafe_allow_html=True
