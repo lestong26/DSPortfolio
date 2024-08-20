@@ -176,6 +176,7 @@ st.markdown(
         max-width: 80%;
         height: auto;
     }}
+    </style>
     
     <div class="project-container">
         <div class="project">
