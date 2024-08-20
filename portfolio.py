@@ -95,11 +95,11 @@ st.markdown(
         align-items: center;
         flex-direction: column;
         text-align: center;
-        margin: 0 auto 50px auto; /* Centers the container and adds space at the bottom */
-        width: 50%; /* Set the width of the container */
+        margin: 0 auto 70px auto; /* Centers the container and adds space at the bottom */
+        width: 40%; /* Set the width of the container */
     }}
     .centered-project img {{
-        max-width: 100%; /* Image will take up 100% of the container's width */
+        max-width: 80%; /* Image will take up 100% of the container's width */
         height: auto;
     }}
     </style>
@@ -129,10 +129,10 @@ st.markdown(
     }}
     .side-by-side-container .project {{
         flex: 1;
-        margin: 0 20px; /* Adds space between the two projects */
+        margin: 0 40px; /* Adds space between the two projects */
     }}
     .side-by-side-container img {{
-        max-width: 100%;
+        max-width: 80%;
         height: auto;
     }}
     </style>
