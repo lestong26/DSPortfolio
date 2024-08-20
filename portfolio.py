@@ -88,19 +88,19 @@ st.markdown(
 
 st.markdown(
     f"""
-    <style>
-    .project-container {{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-    }}
-    .project img {{
-        max-width: 100%;
-        height: auto;
-    }}
-    </style>
+    # <style>
+    # .project-container {{
+    #     display: flex;
+    #     justify-content: center;
+    #     align-items: center;
+    #     flex-direction: column;
+    #     text-align: center;
+    # }}
+    # .project img {{
+    #     max-width: 100%;
+    #     height: auto;
+    # }}
+    # </style>
     <div class="project-container">
         <div class="project">
             <a href="https://askwelabscapstoneproject.streamlit.app/" target="_blank">
