@@ -96,10 +96,11 @@ st.markdown(
         align-items: center;
         flex-direction: column;
         text-align: center;
-        margin-bottom: 50px; /* Adds space between the centered project and the side-by-side projects */
+        margin-bottom: 50px;
+        width: 50%; /* Set the width of the container to match the image */
     }}
     .centered-project img {{
-        max-width: 50%;
+        max-width: 100%; /* Image will take up 100% of the container's width */
         height: auto;
     }}
     </style>
